@@ -17,7 +17,7 @@
   animate(document.querySelector('.hero-copy'),[{opacity:0,transform:'translateY(24px)'},{opacity:1,transform:'none'}],{delay:300,fill:'backwards'});
   animate(document.querySelector('.hero-photo'),[{opacity:0,transform:'translateY(30px)'},{opacity:1,transform:'none'}],{duration:1200,delay:180,fill:'backwards'});
   const reveal = new IntersectionObserver(entries => {
-    entries.forEach(({target,isIntersecting})=>{if(!isIntersecting)return;animate(target,[{opacity:0,transform:'translateY(38px)'},{opacity:1,transform:'none'}],{delay:Number(target.dataset.stagger||0),fill:'backwards'});reveal.unobserve(target);});
+    entries.forEach(({target,isIntersecting})=>{if(!isIntersecting)return;if(target.matches('.product')&&matchMedia('(max-width:767px)').matches){reveal.unobserve(target);return;}animate(target,[{opacity:0,transform:'translateY(38px)'},{opacity:1,transform:'none'}],{delay:Number(target.dataset.stagger||0),fill:'backwards'});reveal.unobserve(target);});
   },{threshold:.08});
   document.querySelectorAll('.section-head,.product,.filters,.filter-note,.statement>.eyebrow,.statement h2,.statement-bottom,.faq details,.footer-top').forEach((el,i)=>{if(el.matches('.product'))el.dataset.stagger=(i%3)*65;reveal.observe(el);});
   const progress = document.createElement('div');progress.className='scroll-progress';progress.setAttribute('aria-hidden','true');document.body.append(progress);
@@ -25,7 +25,7 @@
   let scheduled=false;
   function frame(){scheduled=false;const h=hero.getBoundingClientRect(),m=mark.getBoundingClientRect();const max=root.scrollHeight-innerHeight;progress.style.transform=`scaleX(${max>0?scrollY/max:0})`;header.classList.toggle('scrolled',scrollY>20);if(!paused){if(h.bottom>0&&h.top<innerHeight)hero.style.setProperty('--hero-offset',`${Math.max(-16,Math.min(16,(innerHeight/2-h.top-h.height/2)*.035))}px`);if(m.bottom>0&&m.top<innerHeight)mark.style.setProperty('--mark-offset',`${Math.max(-25,Math.min(25,(innerHeight/2-m.top)*.06))}px`);}}
   addEventListener('scroll',()=>{if(!scheduled){scheduled=true;requestAnimationFrame(frame);}},{passive:true});addEventListener('resize',frame);frame();
-  document.querySelectorAll('[data-filter]').forEach(button=>button.addEventListener('click',()=>{document.querySelectorAll('.product:not([hidden])').forEach((el,i)=>{el.getAnimations().forEach(a=>a.cancel());animate(el,[{opacity:0,transform:'translateY(20px)'},{opacity:1,transform:'none'}],{duration:550,delay:Math.min(i,5)*45,fill:'backwards'});});}));
+  document.querySelectorAll('[data-filter]').forEach(button=>button.addEventListener('click',()=>{if(matchMedia('(max-width:767px)').matches)return;document.querySelectorAll('.product:not([hidden])').forEach((el,i)=>{el.getAnimations().forEach(a=>a.cancel());animate(el,[{opacity:0,transform:'translateY(20px)'},{opacity:1,transform:'none'}],{duration:550,delay:Math.min(i,5)*45,fill:'backwards'});});}));
   // Keep native modal semantics, Escape, focus restoration and existing checkout flow.
   document.querySelectorAll('dialog').forEach(dialog=>{
     const close = dialog.close.bind(dialog);let closing=false;
