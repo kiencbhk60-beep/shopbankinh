@@ -1,0 +1,24 @@
+/* Lucian UX/UI Prompt #219 · MIT License (c) 2026 Seokwoooo · https://lucianlabs.dev/uxui-prompt/#219 */
+.u219-tg{width:44px;height:44px;flex:none;border:1px solid var(--line);border-radius:10px;background:var(--paper);color:var(--ink);display:grid;place-items:center;cursor:pointer}.u219-tg svg{width:20px;height:20px;transition:transform .6s cubic-bezier(.3,1.4,.5,1)}[data-theme=dark] .u219-tg svg{transform:rotate(-90deg)}.u219-tg:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+::view-transition-old(root),::view-transition-new(root){animation:none;mix-blend-mode:normal}::view-transition-new(root){z-index:1}::view-transition-old(root){z-index:0}
+html[data-theme=dark]{color-scheme:dark;--paper:#181b1a;--ink:#f4f0e5;--line:#50554f;--accent:#ef642f}
+[data-theme=dark] header{background:rgba(24,27,26,.96)}
+[data-theme=dark] .logo .logo-bross{color:var(--ink)}
+[data-theme=dark] :is(.product-info p,.product-info p.product-subtitle,.product-info p.product-colour,.filter-note,.note,.bag-price,.order-product p,.order-field label span,.cod-description,.order-demo-note,#review-details dt,.faq details p){color:#d6d2c6}
+[data-theme=dark] :is(.button,#dialog-add,.order-submit){background:var(--accent);color:#171a17}
+[data-theme=dark] .perspective{background:#222824;color:var(--ink)}
+[data-theme=dark] .button.dark{background:var(--ink);color:var(--paper)}
+[data-theme=dark] .product-info .order-card-button{border-color:var(--line);color:var(--ink)}
+[data-theme=dark] .product-info .order-card-button:hover{background:var(--ink);color:var(--paper)}
+[data-theme=dark] :is(.filters .active,.filters button:hover){background:var(--ink);color:var(--paper)}
+[data-theme=dark] .u245{--ux-accent:#ffad7d}
+[data-theme=dark] .u356{--ux-page:var(--paper);--ux-ink:var(--ink);--ux-line:var(--line)}
+[data-theme=dark] :is(.order-back,nav a[aria-current]){color:#ffad7d}
+[data-theme=dark] .payment-line>span{background:#353b36;color:var(--ink)}
+[data-theme=dark] :is(.order-field input,.order-field textarea)::placeholder{color:#b9b9af}
+[data-theme=dark] .field-error{color:#ffb39b!important}
+[data-theme=dark] :is(.bag-quantity button:hover,.order-close:hover){background:#343b35;color:var(--ink)}
+[data-theme=dark] #toast{background:var(--ink);color:var(--paper)}
+[data-theme=dark] .review-notice{background:#383128;color:#f4dfc5}
+@media(max-width:600px){header .nav-actions{gap:5px}.u219-tg{width:40px;min-width:40px}header .logo{font-size:23px}header{padding-left:4%;padding-right:4%}}
+@media(prefers-reduced-motion:reduce){.u219-tg svg{transition:none}}

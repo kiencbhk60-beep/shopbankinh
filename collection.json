@@ -1,0 +1,72 @@
+{
+  "ridgeline": {
+    "name": "RIDGELINE",
+    "image": "assets/ridgeline.webp",
+    "description": "Gọng bạc · Tròng xanh lam–lục",
+    "subtitle": "Theo đường sống núi, mở lối riêng.",
+    "category": "trekking"
+  },
+  "nightfall": {
+    "name": "NIGHTFALL",
+    "image": "assets/nightfall.webp",
+    "description": "Gọng đen · Tròng tối",
+    "subtitle": "Sắc đen trầm, tinh thần đường mòn.",
+    "category": "trekking"
+  },
+  "aurora": {
+    "name": "AURORA",
+    "image": "assets/aurora.webp",
+    "description": "Gọng bạc · Tròng chuyển sắc lục–tím",
+    "subtitle": "Một sắc trời khác trên mỗi cung đường.",
+    "category": "mountain"
+  },
+  "suncrest": {
+    "name": "SUNCREST",
+    "image": "assets/suncrest.webp",
+    "description": "Gọng xám · Tròng vàng–cam",
+    "subtitle": "Mang sắc nắng lên từng con dốc.",
+    "category": "mountain"
+  },
+  "ember": {
+    "name": "EMBER",
+    "image": "assets/ember.webp",
+    "description": "Gọng đen · Tròng cam–đỏ",
+    "subtitle": "Giữ lửa cho từng bước chạy.",
+    "category": "running"
+  },
+  "granite": {
+    "name": "GRANITE",
+    "image": "assets/granite.webp",
+    "description": "Gọng xám than · Tròng tối",
+    "subtitle": "Sắc đá trầm, chất núi riêng.",
+    "category": "mountain"
+  },
+  "wildtrail": {
+    "name": "WILDTRAIL",
+    "image": "assets/wildtrail.webp",
+    "description": "Gọng cam–xanh rêu · Tròng xanh lam",
+    "subtitle": "Rẽ khỏi lối quen, tìm màu hoang dã.",
+    "category": "trekking"
+  },
+  "sandstone": {
+    "name": "SANDSTONE",
+    "image": "assets/sandstone.webp",
+    "description": "Gọng màu cát · Tròng chuyển sắc",
+    "subtitle": "Sắc đất ấm, bước chân đi xa.",
+    "category": "trekking"
+  },
+  "glacier": {
+    "name": "GLACIER",
+    "image": "assets/glacier.webp",
+    "description": "Gọng bạc · Tròng xanh lam",
+    "subtitle": "Một khoảng xanh giữa chặng chinh phục.",
+    "category": "mountain"
+  },
+  "bluehour": {
+    "name": "BLUEHOUR",
+    "image": "assets/bluehour.webp",
+    "description": "Gọng đen · Tròng xanh dương",
+    "subtitle": "Bắt nhịp chạy, đón khoảng trời xanh.",
+    "category": "running"
+  }
+}

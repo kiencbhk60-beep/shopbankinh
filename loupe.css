@@ -1,0 +1,23 @@
+/* Lucian UX/UI Prompt #356 · MIT License (c) 2026 Seokwoooo · https://lucianlabs.dev/uxui-prompt/#356 */
+.u356{--ux-page:var(--paper);--ux-ink:var(--ink);--ux-line:var(--line);--ux-accent:var(--accent);--ux-shadow-strong:rgba(0,0,0,.3);position:relative;min-width:0;width:100%;font:inherit;color:var(--ux-ink)}
+.u356,.u356 *,.u356 *::before,.u356 *::after{box-sizing:border-box}
+.u356 .u356-title{font-family:inherit;font-size:16px;font-weight:600;line-height:1.5;margin:0 0 12px;letter-spacing:0}
+.u356 .u356-st{position:relative;width:100%;height:clamp(240px,48vh,470px);border-radius:30px;background:#292f39;box-shadow:0 0 0 1px var(--ux-line),0 30px 60px -36px var(--ux-shadow-strong);touch-action:pan-y;cursor:crosshair;isolation:isolate}
+.u356 .u356-st.is-active{cursor:none;touch-action:none}
+.u356 #dialog-image{display:block;width:100%;height:100%;max-height:none;aspect-ratio:auto;object-fit:contain;object-position:50% 50%;border-radius:30px;pointer-events:none;user-select:none}
+.u356 .u356-lp{position:absolute;left:0;top:0;width:128px;height:128px;margin:-64px 0 0 -64px;border-radius:50%;overflow:hidden;pointer-events:none;opacity:0;transform:scale(.6);transition:opacity .26s,transform .39s cubic-bezier(.3,1.5,.5,1);box-shadow:0 0 0 5px var(--ux-ink),0 0 0 7px var(--ux-accent),0 18px 30px -8px rgba(0,0,0,.55);background:#292f39;z-index:2}
+.u356 .u356-lp.is-on{opacity:1;transform:scale(1)}
+.u356 .u356-lp img{position:absolute;left:0;top:0;max-width:none;max-height:none;transform-origin:0 0;pointer-events:none}
+.u356 .u356-lp::after{content:"";position:absolute;inset:0;border-radius:50%;background:radial-gradient(circle at 30% 25%,rgba(255,255,255,.35),transparent 40%);box-shadow:inset 0 0 18px rgba(0,0,0,.35)}
+.u356 .u356-zm{position:absolute;left:0;top:0;padding:3px 8px;border-radius:999px;background:var(--ux-ink);color:var(--ux-page);font:800 12px/1.4 ui-monospace,SFMono-Regular,Menlo,monospace;pointer-events:none;opacity:0;transform:translate(-50%,0);transition:opacity .26s;z-index:3}
+.u356 .u356-zm.is-on{opacity:1}
+.u356 .u356-guide{font-size:12px;line-height:1.7;margin:16px 0 10px;color:var(--ux-ink)}
+.u356 .u356-touch{display:none}.u356 .u356-controls{display:flex;gap:8px;flex-wrap:wrap}.u356 .u356-controls button{min-height:44px;padding:10px 14px;border:1px solid var(--ux-line);border-radius:24px;background:var(--ux-page);color:var(--ux-ink);font:inherit;font-size:13px;cursor:pointer}.u356 .u356-controls button[aria-pressed=true]{background:var(--ux-ink);color:var(--ux-page)}
+.u356 :focus-visible{outline:3px solid var(--ux-accent);outline-offset:4px}
+.u356 .u356-sr{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap;border:0}
+.u356[data-theme=dark]{--ux-page:#13141c;--ux-ink:#f4f0e8;--ux-line:#555761;--ux-accent:#ff8746;--ux-shadow-strong:rgba(0,0,0,.72);background:var(--ux-page);color:var(--ux-ink)}
+@media(max-width:600px),(pointer:coarse){.u356 .u356-desktop{display:none}.u356 .u356-touch{display:inline}}
+@media(max-width:600px){.u356 .u356-st{height:300px}.u356 .u356-title{padding-right:26px}}
+@media(prefers-reduced-motion:reduce){.u356 *,.u356 *::before,.u356 *::after{animation:none!important;transition:none!important}}
+.u356.is-motion-paused *,.u356.is-motion-paused *::before,.u356.is-motion-paused *::after{animation:none!important;transition:none!important}
+

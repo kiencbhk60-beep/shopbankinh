@@ -1,0 +1,10 @@
+/* Lucian UX/UI Prompt #245 · MIT License (c) 2026 Seokwoooo · https://lucianlabs.dev/uxui-prompt/#245 */
+.u245{--ux-accent:var(--paper);--ux-ease:cubic-bezier(.2,.8,.2,1)}
+.u245 .u245-w{white-space:nowrap}
+.u245 .u245-c{position:relative;display:inline-block}
+.u245 .u245-c b{font-weight:inherit;transition:color .6s var(--ux-ease)}
+.u245 .u245-c i{position:absolute;left:50%;top:.08em;transform:translateX(-50%);font:600 .82em/1.2 ui-monospace,SFMono-Regular,Menlo,monospace;font-style:normal;color:var(--ux-accent);opacity:0}
+.u245 .u245-c.s b,.u245 .u245-c.z b{visibility:hidden}
+.u245 .u245-c.s i{opacity:.9}
+.u245 .u245-c.f b{color:var(--ux-accent);transition:none}
+@media(prefers-reduced-motion:reduce){.u245 .u245-c b{visibility:visible!important;transition:none!important;color:inherit!important}.u245 .u245-c i{display:none}}
