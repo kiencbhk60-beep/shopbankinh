@@ -55,3 +55,12 @@
  .collection-progress>span{display:block;height:100%;width:10%;background:var(--accent);transform-origin:left;transition:width .45s var(--ease-out)}
 }
 @media(prefers-reduced-motion:reduce){#collection .product,.collection-progress>span{transition:none}}
+
+/* Four compact product cards per row on desktop. */
+@media(min-width:1024px){
+ #collection .products{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:30px 24px}
+ #collection .product{display:flex;flex-direction:column;min-width:0}
+ #collection .product-info{flex:1;display:flex;flex-direction:column;align-items:stretch;gap:14px}
+ #collection .product-info>div{flex:1}
+ #collection .product-info .order-card-button{width:100%;margin-top:auto}
+}
