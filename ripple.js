@@ -2,10 +2,10 @@
 
 (function () {
   var heading=document.querySelector('.hero-title h1');
-  var root=document.createElement('div');root.className='ux u205';heading.before(root);root.append(heading);heading.classList.add('u205-wd');heading.setAttribute('aria-label','Walk further, feel alive.');heading.replaceChildren();
+  var root=document.createElement('div');root.className='ux u205';heading.before(root);root.append(heading);heading.classList.add('u205-wd');heading.setAttribute('aria-label','WALK FURTHER, FEEL ALIVE.');heading.replaceChildren();
   var wd = root.querySelector('.u205-wd');
   var rm = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var WORD = 'Walk further,|feel alive.', SIG = 34;
+  var WORD = 'WALK FURTHER, FEEL ALIVE.', SIG = 34;
   var amp = 25, px = null, pulse = null, raf = 0;
   var L = Array.from(WORD).map(function (ch, index) {
     if(ch==='|'){wd.appendChild(document.createElement('br'));return null;}

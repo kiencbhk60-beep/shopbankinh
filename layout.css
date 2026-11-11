@@ -19,3 +19,8 @@
 
 /* Slogan colours follow the theme while the signature spring animation stays intact. */
 .hero-title .u205 .u205-l{color:var(--letter-color,var(--ink))}
+
+/* Single-line slogan, proportioned to its own available column. */
+.hero-title h1,.hero-title .u205 h1{font-size:clamp(20px,4.5vw,72px);line-height:1.2;white-space:nowrap;letter-spacing:-.015em}
+.hero-title .u205{container-type:inline-size;padding:38px 0 12px}
+@supports (font-size:1cqw){.hero-title .u205 h1{font-size:clamp(18px,7.5cqw,72px)}}
