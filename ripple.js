@@ -15,7 +15,16 @@
     return { el: s, x: 0, y: 0, v: 0 };
   });
   L=L.filter(Boolean);
-  function measure() { L.forEach(function (l) { l.x = l.el.offsetLeft + l.el.offsetWidth / 2; }); }
+  function measure() {
+    var available = root.clientWidth;
+    var width = L.reduce(function (total, l) { return total + l.el.getBoundingClientRect().width; }, 0);
+    var current = parseFloat(getComputedStyle(wd).fontSize);
+    if (available > 0 && width > 0 && current > 0) {
+      var fitted = Math.max(12, Math.min(144, current * available * 0.98 / width));
+      if (Math.abs(fitted - current) > 0.1) wd.style.fontSize = fitted.toFixed(2) + 'px';
+    }
+    L.forEach(function (l) { l.x = l.el.offsetLeft + l.el.offsetWidth / 2; });
+  }
   function g(d, s) { return Math.exp(-(d * d) / (2 * s * s)); }
   function tick(now) {
     raf = 0;
