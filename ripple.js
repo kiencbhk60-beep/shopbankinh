@@ -2,15 +2,15 @@
 
 (function () {
   var heading=document.querySelector('.hero-title h1');
-  var root=document.createElement('div');root.className='ux u205';heading.before(root);root.append(heading);heading.classList.add('u205-wd');heading.setAttribute('aria-label','GO YOUR WAY.');heading.replaceChildren();
+  var root=document.createElement('div');root.className='ux u205';heading.before(root);root.append(heading);heading.classList.add('u205-wd');heading.setAttribute('aria-label','Walk further, feel alive.');heading.replaceChildren();
   var wd = root.querySelector('.u205-wd');
   var rm = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var WORD = 'GO YOUR WAY.', SIG = 34;
+  var WORD = 'Walk further,|feel alive.', SIG = 34;
   var amp = 25, px = null, pulse = null, raf = 0;
   var L = Array.from(WORD).map(function (ch, index) {
     if(ch==='|'){wd.appendChild(document.createElement('br'));return null;}
     var s = document.createElement('span');if(ch===' ')s.classList.add('u205-space');
-    s.classList.add('u205-l');if(index>=8)s.style.setProperty('--letter-color','var(--accent)'); s.textContent = ch; s.setAttribute('aria-hidden', 'true');
+    s.classList.add('u205-l');s.style.setProperty('--letter-color',((index>=5&&index<=11)||(index>=19&&index<=23))?'var(--accent)':'var(--ink)'); s.textContent = ch; s.setAttribute('aria-hidden', 'true');
     wd.appendChild(s);
     return { el: s, x: 0, y: 0, v: 0 };
   });
